@@ -1,8 +1,11 @@
+import LandingBar from "@/components/LandingBar";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="bg-my_bg_image h-screen w-screen bg-no-repeat bg-cover">
+      <LandingBar />
       <div className="absolute right-0 bottom-0 ">
         <Image src="/logo 3.png" alt="bg-image" width={600} height={500} />
       </div>
@@ -23,9 +26,12 @@ export default function Home() {
                 accuracy.
               </p>
             </div>
-            <button className="flex px-[40px] py-[15px] justify-center items-center gap-[10px] rounded-[60px] bg-[#06F6EE] hover:bg-[#201D30] hover:text-primary transition duration-300 ease-in-out transform hover:scale-105">
+            <Link
+              href="/assessment"
+              className="flex px-[40px] py-[15px] justify-center items-center gap-[10px] rounded-[60px] bg-[#06F6EE] hover:bg-[#201D30] hover:text-primary transition duration-300 ease-in-out transform hover:scale-105"
+            >
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
       </div>
