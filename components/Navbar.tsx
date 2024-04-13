@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
@@ -40,8 +41,11 @@ const Navbar = () => {
               Upgrade to Premium
             </div>
           </div>
-          {/* <img className="relative w-[19px] h-[32px]" alt="How it words" src="how-it-words.svg" /> */}
-          {/* <img className="relative w-[38px] h-[38px]" alt="Settings" src="settings.svg" /> */}
+          <div>
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
+          </div>
         </div>
       </div>
     </div>
